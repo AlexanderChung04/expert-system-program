@@ -1,16 +1,58 @@
-# React + Vite
+# Applicant Qualification Expert System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a rule-based expert system that determines which available
+positions an applicant is qualified for based on education, coursework,
+skills, certifications, and professional experience.
 
-Currently, two official plugins are available:
+## How the Expert System Works
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The applicant enters their qualifications using the web form.
 
-## React Compiler
+The system compares the applicant's information against the requirements
+for each of the following positions:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Entry-Level Python Engineer
+- Python Engineer
+- Project Manager
+- Senior Knowledge Engineer
 
-## Expanding the ESLint configuration
+The system then displays whether the applicant is qualified or not qualified
+for each position. It also displays the requirements that were met or not met
+to explain the reasoning behind each conclusion.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Required qualifications determine whether an applicant qualifies for a
+position. Desired skills are displayed in the results but do not prevent an
+otherwise qualified applicant from qualifying.
+
+## Running the Program
+
+The expert system can be run directly using the deployed Vercel website.
+
+For local development:
+
+1. Install the project dependencies with `npm install`.
+2. Start the development server with `npm run dev`.
+3. Open the localhost URL displayed in the terminal.
+
+## Manual Testing
+
+The expert system was manually tested using different applicant profiles
+to verify the qualification rules and reasoning.
+
+Testing included:
+
+- Applicants meeting all requirements for each of the four positions.
+- Applicants missing required qualifications.
+- Applicants missing only desired skills.
+- Minimum experience boundaries, such as meeting the exact number of
+  required years.
+- Experience values below the required minimum.
+- Applicants with a Bachelor's in Computer Science but not a Master's.
+- Applicants with a Master's in Computer Science but not a Bachelor's.
+- Project Manager applicants with and without the required PMI certification.
+- Senior Knowledge Engineer applicants with different amounts of data
+  architecture and data development experience.
+- Invalid experience values such as negative numbers.
+
+The displayed conclusions and reasoning were checked against the position
+requirements.
