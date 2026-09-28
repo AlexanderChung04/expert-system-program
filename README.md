@@ -56,4 +56,5 @@ Testing included:
 - Invalid experience values such as negative numbers.
 
 The displayed conclusions and reasoning were checked against the position
-requirements.
+requirements. I also made the explicit assumption that years of Python development 
+also means the same as years using Python to develop.
