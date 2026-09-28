@@ -47,8 +47,9 @@ Testing included:
 - Minimum experience boundaries, such as meeting the exact number of
   required years.
 - Experience values below the required minimum.
-- Applicants with a Bachelor's in Computer Science but not a Master's.
-- Applicants with a Master's in Computer Science but not a Bachelor's.
+- Experience values above the required minimum.
+- Applicants with a Bachelors in Computer Science but not a Masters.
+- Applicants with a Masters in Computer Science but not a Bachelors.
 - Project Manager applicants with and without the required PMI certification.
 - Senior Knowledge Engineer applicants with different amounts of data
   architecture and data development experience.
