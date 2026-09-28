@@ -10,13 +10,13 @@ function App() {
     agileCourse: false,
     gitExperience: false,
     pmiCertification: false,
-    pythonYears: '',
-    dataYears: '',
     agileExperience: false,
-    agileYears: '',
-    managementYears: '',
-    expertSystemYears: '',
-    dataArchitectureYears: ''
+    pythonYears: '0',
+    dataYears: '0',
+    agileYears: '0',
+    managementYears: '0',
+    expertSystemYears: '0',
+    dataArchitectureYears: '0'
   })
 
   const [results, setResults] = useState([])
@@ -56,6 +56,7 @@ function App() {
         name="degree"
         value={applicant.degree}
         onChange={handleChange}
+        required
       >
           <option value="">Select a degree</option>
           <option value="none">None</option>
