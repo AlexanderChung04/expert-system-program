@@ -4,7 +4,8 @@ import evaluateApplicant from './expertSystem/evaluateApplicant'
 
 function App() {
   const [applicant, setApplicant] = useState({
-    degree: '',
+    bachelorsCS: false,
+    mastersCS: false,
     pythonCoursework: false,
     softwareEngineeringCoursework: false,
     agileCourse: false,
@@ -50,19 +51,25 @@ function App() {
       <form onSubmit={handleSubmit}>
         <h2>Education</h2>
 
-        <label htmlFor="degree">Highest CS Degree</label>
-      <select
-        id="degree"
-        name="degree"
-        value={applicant.degree}
-        onChange={handleChange}
-        required
-      >
-          <option value="">Select a degree</option>
-          <option value="none">None</option>
-          <option value="bachelors">Bachelor in CS</option>
-          <option value="masters">Masters in CS</option>
-        </select>
+        <label>
+  <input
+    type="checkbox"
+    name="bachelorsCS"
+    checked={applicant.bachelorsCS}
+    onChange={handleChange}
+  />
+  Bachelor in Computer Science
+</label>
+
+<label>
+  <input
+    type="checkbox"
+    name="mastersCS"
+    checked={applicant.mastersCS}
+    onChange={handleChange}
+  />
+  Masters in Computer Science
+</label>
 
         <h2>Coursework and Skills</h2>
 
@@ -95,6 +102,16 @@ function App() {
       />
           Completed an Agile course
         </label>
+
+      <label>
+          <input
+          type="checkbox"
+          name="agileExperience"
+          checked={applicant.agileExperience}
+          onChange={handleChange}
+        />
+       Experience working on Agile projects
+</label>
 
         <label>
           <input
@@ -142,15 +159,6 @@ function App() {
   onChange={handleChange}
 />
 
-<label>
-  <input
-    type="checkbox"
-    name="agileExperience"
-    checked={applicant.agileExperience}
-    onChange={handleChange}
-  />
-  Experience working on Agile projects
-</label>
 
 <label htmlFor="agileYears">
   Years of experience in Agile projects
@@ -189,7 +197,7 @@ function App() {
 />
 
 <label htmlFor="dataArchitectureYears">
-  Years of data architecture and data development
+  Years of data architecture
 </label>
 <input
   type="number"

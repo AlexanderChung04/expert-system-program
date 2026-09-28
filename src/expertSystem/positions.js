@@ -13,9 +13,7 @@ const positions = [
       },
       {
         description: "Bachelor in CS",
-        check: (applicant) =>
-          applicant.degree === "bachelors" ||
-          applicant.degree === "masters"
+        check: (applicant) => applicant.bachelorsCS
       }
     ],
 
@@ -45,9 +43,7 @@ const positions = [
       },
       {
         description: "Bachelor in CS",
-        check: (applicant) =>
-          applicant.degree === "bachelors" ||
-          applicant.degree === "masters"
+        check: (applicant) => applicant.bachelorsCS
       }
     ],
 
@@ -70,15 +66,14 @@ const positions = [
       {
         description: "2 years experience in Agile projects",
         check: (applicant) => Number(applicant.agileYears) >= 2
-      }
-    ],
-
-    desired: [
+      },
       {
         description: "PMI Lean Project Management Certification",
         check: (applicant) => applicant.pmiCertification
       }
-    ]
+    ],
+
+    desired: []
   },
 
   {
@@ -94,13 +89,18 @@ const positions = [
         check: (applicant) => Number(applicant.expertSystemYears) >= 2
       },
       {
-        description: "2 years data architecture and data development",
+        description: "2 years data architecture",
         check: (applicant) =>
           Number(applicant.dataArchitectureYears) >= 2
       },
       {
+        description: "2 years data development",
+        check: (applicant) =>
+          Number(applicant.dataYears) >= 2
+      },
+      {
         description: "Masters in CS",
-        check: (applicant) => applicant.degree === "masters"
+        check: (applicant) => applicant.mastersCS
       }
     ],
 
