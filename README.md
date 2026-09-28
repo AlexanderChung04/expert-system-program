@@ -55,6 +55,13 @@ Testing included:
   architecture and data development experience.
 - Invalid experience values such as negative numbers.
 
-The displayed conclusions and reasoning were checked against the position
-requirements. I also made the explicit assumption that years of Python development 
+## Assumptions
+
+- Made sure to separate Masters in CS from Bachelors in CS, as a Masters
+doesn't always mean they also have a Bachelors in CS as well, and vice versa
+- Made the explicit assumption that years of Python development 
 also means the same as years using Python to develop.
+- Another assumption was made for the Senior Knowledge Engineer, assuming that
+the role requires 2 years in data architecture and 2 years in data development,
+so cases like a combined two years in both, or two years in one but not the other
+will result in disqualified.
